@@ -1,0 +1,38 @@
+import time
+
+def bubble_sort(arr):
+    n = len(arr)
+
+    for i in range(n - 1):
+        swapped = False
+
+        for j in range(n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swapped = True
+
+        if not swapped:
+            break
+
+
+# User Input
+arr = list(map(int, input("Enter numbers separated by spaces: ").split()))
+
+# Start Time
+start_time = time.perf_counter()
+
+# Sort the array
+bubble_sort(arr)
+
+# End Time
+end_time = time.perf_counter()
+
+# Display Results
+print("\nSorted Array:", arr)
+print("Execution Time: {:.8f} seconds".format(end_time - start_time))
+
+print("\nTime Complexity:")
+print("Best Case    : O(n)")
+print("Average Case : O(n^2)")
+print("Worst Case   : O(n^2)")
+print("Space Complexity: O(1)")
