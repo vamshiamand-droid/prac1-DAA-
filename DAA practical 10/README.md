@@ -1,0 +1,2 @@
+Conclusion: 
+Thus, Kruskal’s algorithm is implemented successfully in Python to find the Minimum Spanning Tree (MST) of a weighted graph. It selects the minimum-weight edges without forming cycles and calculates the minimum total cost.
